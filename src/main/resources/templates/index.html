@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Klunner presentation</title>
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <link rel="stylesheet" th:href="@{css/light/pages/homepage.css}">
+</head>
+<body>
+<div th:insert="~{components/header.html :: header(data=${header})}"></div>
+<div class="helloo" th:text="${title}"></div>
+<div class="cool">Hello Adi</div>
+<div class="same">Hello Cristian</div>
+<div class="same">This technicque is awesome</div>
+</body>
+</html>

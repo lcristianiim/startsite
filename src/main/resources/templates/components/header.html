@@ -1,0 +1,16 @@
+<div th:fragment="header(data)" xmlns:th="http://www.w3.org/1999/xhtml" th:remove="tag">
+    <link rel="stylesheet" th:href="@{/css/light/components/header/header.css}">
+    <div id="header-main-container" xmlns:th="http://www.w3.org/1999/xhtml">
+        <div th:text="${data.logo}"></div>
+        <div id="header-left-menu">
+        <div th:each="link : ${data.leftLinks}">
+            <a th:href="${link.url}" th:text="${link.name}"></a>
+        </div>
+        </div>
+        <div id="header-right-menu">
+            <div th:each="li : ${data.rightLinks}">
+                <a th:href="${li.url}" th:text="${li.name}"></a>
+            </div>
+        </div>
+    </div>
+</div>
