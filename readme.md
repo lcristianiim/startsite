@@ -15,7 +15,7 @@ npm run build
 npm run build:prod
 ## Live Reload
 Live reload of html, css, js files is based on this article https://www.wimdeblauwe.com/blog/2022/07/03/thymeleaf-live-reload-with-npm-scripts/
-1. sass --watch src/main/resources/sass/:src/main/resources/static/css/
+1. `sass --watch src/main/resources/sass/:src/main/resources/static/css/`
 2. start the spring boot app
 3. `npm run build && npm run watch` will run `localhost:3000` with browser sync
 4. open the browser on `localhost:3000` and enjoy
