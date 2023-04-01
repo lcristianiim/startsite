@@ -5,7 +5,7 @@
 # Start app
 ## For development
 #### Intellij
-From Intellij with the start arrow on `src/main/java/ro/kluner/klunerpresentation/StartSite.java`
+From Intellij with the start arrow on `com/startup/startsitepresentation/StartSite.java`
 #### Command line via maven wrapper
 1. ./mvnw clean package
 2. java -cp target/classes:target/dependencies/* com.startup.startsitepresentation.StartSite
