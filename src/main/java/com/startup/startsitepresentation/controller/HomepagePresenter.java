@@ -1,4 +1,4 @@
-package ro.kluner.klunerpresentation.controller;
+package com.startup.startsitepresentation.controller;
 
 import org.springframework.web.servlet.ModelAndView;
 

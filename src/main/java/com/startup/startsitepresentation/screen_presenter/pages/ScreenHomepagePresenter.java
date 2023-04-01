@@ -1,8 +1,8 @@
-package ro.kluner.klunerpresentation.screen_presenter.pages;
+package com.startup.startsitepresentation.screen_presenter.pages;
 
 import org.springframework.web.servlet.ModelAndView;
-import ro.kluner.klunerpresentation.controller.HomepageInput;
-import ro.kluner.klunerpresentation.controller.HomepagePresenter;
+import com.startup.startsitepresentation.controller.HomepageInput;
+import com.startup.startsitepresentation.controller.HomepagePresenter;
 
 public class ScreenHomepagePresenter implements HomepagePresenter {
 

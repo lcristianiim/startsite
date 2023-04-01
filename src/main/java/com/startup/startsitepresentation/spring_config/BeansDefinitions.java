@@ -1,9 +1,9 @@
-package ro.kluner.klunerpresentation.spring_config;
+package com.startup.startsitepresentation.spring_config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ro.kluner.klunerpresentation.controller.HomepagePresenter;
-import ro.kluner.klunerpresentation.screen_presenter.pages.ScreenHomepagePresenter;
+import com.startup.startsitepresentation.controller.HomepagePresenter;
+import com.startup.startsitepresentation.screen_presenter.pages.ScreenHomepagePresenter;
 
 @Configuration
 public class BeansDefinitions {

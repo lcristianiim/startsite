@@ -1,13 +1,13 @@
-package ro.kluner.klunerpresentation.controller;
+package com.startup.startsitepresentation.controller;
 
 
+import com.startup.startsitepresentation.interactor.HomepageService;
+import com.startup.startsitepresentation.screen_presenter.components.header.HeaderDS;
+import com.startup.startsitepresentation.screen_presenter.components.header.Link;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
-import ro.kluner.klunerpresentation.interactor.HomepageService;
-import ro.kluner.klunerpresentation.screen_presenter.components.header.HeaderDS;
-import ro.kluner.klunerpresentation.screen_presenter.components.header.Link;
 
 import java.util.List;
 

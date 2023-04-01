@@ -1,9 +1,9 @@
-package ro.kluner.klunerpresentation.controller;
+package com.startup.startsitepresentation.controller;
 
+import com.startup.startsitepresentation.screen_presenter.components.header.HeaderDS;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import ro.kluner.klunerpresentation.screen_presenter.components.header.HeaderDS;
 
 @AllArgsConstructor
 @Getter

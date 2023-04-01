@@ -1,10 +1,10 @@
-package ro.kluner.klunerpresentation.prototyping;
+package com.startup.startsitepresentation.prototyping;
 
+import com.startup.startsitepresentation.screen_presenter.components.header.HeaderDS;
+import com.startup.startsitepresentation.screen_presenter.components.header.Link;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
-import ro.kluner.klunerpresentation.screen_presenter.components.header.HeaderDS;
-import ro.kluner.klunerpresentation.screen_presenter.components.header.Link;
 
 import java.util.List;
 

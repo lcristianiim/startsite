@@ -1,4 +1,4 @@
-package ro.kluner.klunerpresentation.screen_presenter.components.header;
+package com.startup.startsitepresentation.screen_presenter.components.header;
 
 import java.util.List;
 

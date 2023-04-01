@@ -1,7 +1,7 @@
-package ro.kluner.klunerpresentation.controller;
+package com.startup.startsitepresentation.controller;
 
+import com.startup.startsitepresentation.screen_presenter.components.header.HeaderDS;
 import org.springframework.web.servlet.ModelAndView;
-import ro.kluner.klunerpresentation.screen_presenter.components.header.HeaderDS;
 
 public interface HeaderPresenter {
     public ModelAndView presentHeader(HeaderInput input);

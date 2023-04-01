@@ -1,4 +1,4 @@
-package ro.kluner.klunerpresentation;
+package com.startup.startsitepresentation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

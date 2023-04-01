@@ -1,4 +1,4 @@
-package ro.kluner.klunerpresentation.interactor;
+package com.startup.startsitepresentation.interactor;
 
 public class HomepageService {
 
