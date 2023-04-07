@@ -2,9 +2,11 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Klunner presentation</title>
-    <link rel="stylesheet" th:href="@{css/custom.css}">
-    <link rel="stylesheet" th:href="@{css/light/pages/homepage.css}">
+    <title th:text="${pageTitle}"></title>
+    <div th:each="stylesheet: ${componentsCSS}" th:tag="remove">
+        <link rel="stylesheet" th:href="|/css/${stylesheet}|">
+    </div>
+
 </head>
 <body>
 <div th:insert="~{components/header.html :: header(data=${header})}"></div>

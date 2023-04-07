@@ -13,8 +13,11 @@ Run the following commands
 Spring boot will run on `localhost:8080`
 ## Live Reload
 Live reload of html, css, js files is inspired by this article https://www.wimdeblauwe.com/blog/2022/07/03/thymeleaf-live-reload-with-npm-scripts/
-### Via `live-reload.sh`
-The above commands are also wrapped in `live-reload.sh`. So you can eiter run this script or the commands above.
+### Via `sass-watch.sh` and `watch.sh`
+The above commands are wrapped by scripts.
+Run:
+1. `sass-watch.sh`
+2. `watch.sh`
 ### Manually running the needed scripts
 1. `sass --watch src/main/resources/sass/:src/main/resources/static/css/`
 2. start the spring boot app

@@ -1,0 +1,13 @@
+#header-main-container {
+    display: flex;
+    gap: 2em;
+    background: green;
+}
+#header-left-menu, #header-right-menu {
+    display: flex;
+    gap: 3em;
+}
+#header-left-menu {
+    flex: 1;
+}
+
