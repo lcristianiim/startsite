@@ -1,8 +1,8 @@
-package com.startup.startsitepresentation.interactor.concept.components;
+package com.startup.startsitepresentation.interactor.concept.components.header;
 
 import com.startup.startsitepresentation.interactor.concept.ComponentType;
 import com.startup.startsitepresentation.interactor.concept.Theme;
-import com.startup.startsitepresentation.screen_presenter.components.header.HeaderDS;
+import com.startup.startsitepresentation.interactor.concept.components.Component;
 
 import java.util.List;
 

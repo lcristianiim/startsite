@@ -1,6 +1,6 @@
-package com.startup.startsitepresentation.controller;
+package com.startup.startsitepresentation.spring.controller;
 
-import com.startup.startsitepresentation.screen_presenter.components.header.HeaderDS;
+import com.startup.startsitepresentation.interactor.concept.components.header.HeaderDS;
 import org.springframework.web.servlet.ModelAndView;
 
 public interface HeaderPresenter {

@@ -1,4 +1,4 @@
-package com.startup.startsitepresentation.controller;
+package com.startup.startsitepresentation.spring.controller;
 
 import java.util.List;
 

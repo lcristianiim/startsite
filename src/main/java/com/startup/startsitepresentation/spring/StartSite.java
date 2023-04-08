@@ -1,4 +1,4 @@
-package com.startup.startsitepresentation;
+package com.startup.startsitepresentation.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

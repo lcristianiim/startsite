@@ -1,10 +1,8 @@
-package com.startup.startsitepresentation.controller;
+package com.startup.startsitepresentation.spring.controller;
 
 import com.startup.startsitepresentation.interactor.concept.Page;
 import org.springframework.web.servlet.ModelAndView;
 
-public interface HomepagePresenter {
-    public ModelAndView presentHomepage(HomepageInput input);
-
+public interface GeneralPagePresenter {
     ModelAndView presentHomepage(Page page);
 }

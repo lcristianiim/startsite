@@ -1,12 +1,11 @@
-package com.startup.startsitepresentation.controller;
-
+package com.startup.startsitepresentation.spring.controller;
 
 import com.startup.startsitepresentation.interactor.concept.Page;
 import com.startup.startsitepresentation.interactor.concept.Theme;
 import com.startup.startsitepresentation.interactor.concept.components.Component;
-import com.startup.startsitepresentation.interactor.concept.components.HeaderComponent;
-import com.startup.startsitepresentation.screen_presenter.components.header.HeaderDS;
-import com.startup.startsitepresentation.screen_presenter.components.header.Link;
+import com.startup.startsitepresentation.interactor.concept.components.header.HeaderComponent;
+import com.startup.startsitepresentation.interactor.concept.components.header.HeaderDS;
+import com.startup.startsitepresentation.interactor.concept.components.commons.Link;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-public class TestController {
+public class HomePage {
     @Autowired
-    HomepagePresenter presenter;
+    GeneralPagePresenter presenter;
 
-    @GetMapping("/test")
+    @GetMapping("/")
     ModelAndView homepage() {
 
         HeaderDS data = new HeaderDS("Great Logo",
@@ -32,8 +31,9 @@ public class TestController {
         );
 
 
-        Component header = new HeaderComponent(data, Theme.DARK);
-        Page page = new Page("Cool title", "test-a", "testing.html", List.of(header));
+        Component<HeaderDS> header = new HeaderComponent(data, Theme.DARK);
+
+        Page page = new Page("Cool title", "test-a", "index.html", List.of(header));
 
         return presenter.presentHomepage(page);
     }

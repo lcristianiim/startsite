@@ -9,7 +9,7 @@ From Intellij with the start arrow on `com/startup/startsitepresentation/StartSi
 #### Command line via maven wrapper
 Run the following commands
 1. `./mvnw clean package`
-2. `java -cp "target/classes:target/dependencies/*" com.startup.startsitepresentation.StartSite`  
+2. `java -cp "target/classes:target/dependencies/*" com.startup.startsitepresentation.spring.spring_config.StartSite`  
 Spring boot will run on `localhost:8080`
 ## Live Reload
 Live reload of html, css, js files is inspired by this article https://www.wimdeblauwe.com/blog/2022/07/03/thymeleaf-live-reload-with-npm-scripts/

@@ -1,4 +1,4 @@
-package com.startup.startsitepresentation.spring_config;
+package com.startup.startsitepresentation.spring.spring_config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;

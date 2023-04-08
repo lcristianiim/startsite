@@ -4,12 +4,12 @@ import java.util.List;
 
 public enum ComponentType {
     HEADER("header",
-            "header.html",
+            "components/header.html",
             List.of( "components/header/header.css"),
-            List.of("header"));
+            List.of("header.js"));
 
-    ComponentType(String attributeNameInPage, String html, List<String> css, List<String> js) {
-        this.attributeNameInPage = attributeNameInPage;
+    ComponentType(String name, String html, List<String> css, List<String> js) {
+        this.name = name;
         this.html = html;
         this.css = css;
         this.js = js;
@@ -18,7 +18,7 @@ public enum ComponentType {
     private final String html;
     private final List<String> css;
     private final List<String> js;
-    private final String attributeNameInPage;
+    private final String name;
 
     public String getHtml() {
         return html;
@@ -32,7 +32,7 @@ public enum ComponentType {
         return js;
     }
 
-    public String getAttributeNameInPage() {
-        return attributeNameInPage;
+    public String getName() {
+        return name;
     }
 }
