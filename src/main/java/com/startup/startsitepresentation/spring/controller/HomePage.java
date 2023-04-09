@@ -1,17 +1,11 @@
 package com.startup.startsitepresentation.spring.controller;
 
-import com.startup.startsitepresentation.interactor.concept.Page;
-import com.startup.startsitepresentation.interactor.concept.Theme;
-import com.startup.startsitepresentation.interactor.concept.components.Component;
-import com.startup.startsitepresentation.interactor.concept.components.header.HeaderComponent;
-import com.startup.startsitepresentation.interactor.concept.components.header.HeaderDS;
-import com.startup.startsitepresentation.interactor.concept.components.commons.Link;
+import com.startup.startsitepresentation.interactor.PagesService;
+import com.startup.startsitepresentation.interactor.PagesServiceMockingImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
 
 @Controller
 public class HomePage {
@@ -21,20 +15,9 @@ public class HomePage {
     @GetMapping("/")
     ModelAndView homepage() {
 
-        HeaderDS data = new HeaderDS("Great Logo",
-                List.of(
-                        new Link("First link", "page-one"),
-                        new Link("Second link", "page-two")),
-                List.of(
-                        new Link("Third link", "page-tree"),
-                        new Link("Forth link", "page-four"))
-        );
+        PagesService service = new PagesServiceMockingImplementation();
+        service.getPageByURL("/");
 
-
-        Component<HeaderDS> header = new HeaderComponent(data, Theme.DARK);
-
-        Page page = new Page("Cool title", "test-a", "index.html", List.of(header));
-
-        return presenter.presentHomepage(page);
+        return presenter.presentHomepage(service.getPageByURL("/"));
     }
 }

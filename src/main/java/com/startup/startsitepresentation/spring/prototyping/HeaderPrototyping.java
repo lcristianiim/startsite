@@ -31,9 +31,9 @@ public class HeaderPrototyping {
                         new Link("Forth link", "page-four"))
         );
 
-        Component<HeaderDS> lightHeader = new HeaderComponent(data, Theme.LIGHT);
+        Component<HeaderDS> lightHeader = new HeaderComponent(data);
 
-        Page page = new Page("Cool title", "test-a", "index.html", List.of(lightHeader));
+        Page page = new Page("Cool title", Theme.LIGHT, "test-a", "index.html", List.of(lightHeader));
         return presenter.presentHomepage(page);
     }
 }

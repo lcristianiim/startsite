@@ -1,8 +1,8 @@
 package com.startup.startsitepresentation.spring.presenter;
 
-import com.startup.startsitepresentation.spring.controller.GeneralPagePresenter;
 import com.startup.startsitepresentation.interactor.concept.Page;
 import com.startup.startsitepresentation.interactor.concept.components.Component;
+import com.startup.startsitepresentation.spring.controller.GeneralPagePresenter;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class ThymeleafPresenter implements GeneralPagePresenter {
 
         for (var comp : page.getComponents()) {
             addComponentsToInserts(inserts, comp);
-            addCssOfComponent(componentsCss, comp);
+            addCssOfComponent(page, componentsCss, comp);
         }
 
         mav.addObject("pageTitle", page.getTitle());
@@ -35,8 +35,10 @@ public class ThymeleafPresenter implements GeneralPagePresenter {
                 comp.getType().getName(), comp.getDataStructure()));
     }
 
-    private static void addCssOfComponent(List<String> componentsCss, Component comp) {
-        componentsCss.addAll(comp.getCss());
+    private static void addCssOfComponent(Page page, List<String> componentsCss, Component comp) {
+        for (var e : comp.getCss()) {
+            componentsCss.add(page.getTheme().getFolderName() + "/" + e);
+        }
     }
 
     public record ThymeleafComponentInsert(String html, String componentName, Object dataStructure){

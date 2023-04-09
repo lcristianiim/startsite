@@ -6,8 +6,6 @@ import java.util.List;
 
 public interface Component<V> {
     ComponentType getType();
-    String getTheme();
     V getDataStructure();
-
     List<String> getCss();
 }
