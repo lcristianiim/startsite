@@ -1,7 +1,9 @@
 package com.startup.startsitepresentation.spring.controller;
 
 import com.startup.startsitepresentation.interactor.PagesService;
-import com.startup.startsitepresentation.interactor.PagesServiceMockingImplementation;
+import com.startup.startsitepresentation.interactor.PagesServiceViaBackender;
+import com.startup.startsitepresentation.spring.presenter.GeneralPagePresenter;
+import org.componenter.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +17,9 @@ public class HomePage {
     @GetMapping("/")
     ModelAndView homepage() {
 
-        PagesService service = new PagesServiceMockingImplementation();
-        service.getPageByURL("/");
+        PagesService service = new PagesServiceViaBackender();
+        Page page = service.getPageByURL("homepage");
 
-        return presenter.presentHomepage(service.getPageByURL("/"));
+        return presenter.presentHomepage(page);
     }
 }

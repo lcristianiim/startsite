@@ -1,11 +1,12 @@
 package com.startup.startsitepresentation.interactor;
 
-import com.startup.startsitepresentation.interactor.concept.Page;
-import com.startup.startsitepresentation.interactor.concept.Theme;
-import com.startup.startsitepresentation.interactor.concept.components.Component;
-import com.startup.startsitepresentation.interactor.concept.components.commons.Link;
-import com.startup.startsitepresentation.interactor.concept.components.header.HeaderComponent;
-import com.startup.startsitepresentation.interactor.concept.components.header.HeaderDS;
+
+import org.componenter.Page;
+import org.componenter.Theme;
+import org.componenter.components.Component;
+import org.componenter.components.commons.Link;
+import org.componenter.components.header.HeaderComponent;
+import org.componenter.components.header.HeaderDS;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class PagesServiceMockingImplementation implements PagesService {
                             new Link("Forth link", "page-four"))
             );
 
-            Component<HeaderDS> header = new HeaderComponent(data);
+            Component header = new HeaderComponent(data);
             return new Page("Cool title", Theme.LIGHT, "test-a", "index.html", List.of(header));
         }
         return null;

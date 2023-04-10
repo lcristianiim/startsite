@@ -1,6 +1,6 @@
-package com.startup.startsitepresentation.spring.controller;
+package com.startup.startsitepresentation.spring.presenter;
 
-import com.startup.startsitepresentation.interactor.concept.Page;
+import org.componenter.Page;
 import org.springframework.web.servlet.ModelAndView;
 
 public interface GeneralPagePresenter {

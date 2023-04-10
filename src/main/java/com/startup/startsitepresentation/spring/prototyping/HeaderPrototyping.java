@@ -1,12 +1,12 @@
 package com.startup.startsitepresentation.spring.prototyping;
 
-import com.startup.startsitepresentation.interactor.concept.Page;
-import com.startup.startsitepresentation.interactor.concept.Theme;
-import com.startup.startsitepresentation.interactor.concept.components.Component;
-import com.startup.startsitepresentation.interactor.concept.components.header.HeaderComponent;
-import com.startup.startsitepresentation.interactor.concept.components.header.HeaderDS;
-import com.startup.startsitepresentation.interactor.concept.components.commons.Link;
-import com.startup.startsitepresentation.spring.controller.GeneralPagePresenter;
+import com.startup.startsitepresentation.spring.presenter.GeneralPagePresenter;
+import org.componenter.Page;
+import org.componenter.Theme;
+import org.componenter.components.Component;
+import org.componenter.components.commons.Link;
+import org.componenter.components.header.HeaderComponent;
+import org.componenter.components.header.HeaderDS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +31,7 @@ public class HeaderPrototyping {
                         new Link("Forth link", "page-four"))
         );
 
-        Component<HeaderDS> lightHeader = new HeaderComponent(data);
+        Component lightHeader = new HeaderComponent(data);
 
         Page page = new Page("Cool title", Theme.LIGHT, "test-a", "index.html", List.of(lightHeader));
         return presenter.presentHomepage(page);

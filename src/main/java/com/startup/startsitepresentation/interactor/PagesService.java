@@ -1,6 +1,7 @@
 package com.startup.startsitepresentation.interactor;
 
-import com.startup.startsitepresentation.interactor.concept.Page;
+
+import org.componenter.Page;
 
 @FunctionalInterface
 public interface PagesService {

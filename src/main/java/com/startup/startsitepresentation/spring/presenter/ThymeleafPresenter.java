@@ -1,8 +1,7 @@
 package com.startup.startsitepresentation.spring.presenter;
 
-import com.startup.startsitepresentation.interactor.concept.Page;
-import com.startup.startsitepresentation.interactor.concept.components.Component;
-import com.startup.startsitepresentation.spring.controller.GeneralPagePresenter;
+import org.componenter.Page;
+import org.componenter.components.Component;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class ThymeleafPresenter implements GeneralPagePresenter {
 
     private static void addComponentsToInserts(List<ThymeleafComponentInsert> inserts, Component comp) {
         inserts.add(new ThymeleafComponentInsert(comp.getType().getHtml(),
-                comp.getType().getName(), comp.getDataStructure()));
+                comp.getType().getName(), comp.getData()));
     }
 
     private static void addCssOfComponent(Page page, List<String> componentsCss, Component comp) {
